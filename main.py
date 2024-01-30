@@ -1,8 +1,9 @@
+import json
 
 from typing import Union
 
 from fastapi import Request, FastAPI
-# from hlap.hlapepbinder import predict
+from hlap.hlapepbinder import predict
 
 app = FastAPI()
 
@@ -22,8 +23,4 @@ def the(one: str, two: str):
 
 @app.post("/dummypath")
 async def get_body(request: Request):
-    return await request.json()
-
-
-
-#     return predict(await request.json())
+    return str(predict(await request.json()))
