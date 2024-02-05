@@ -11,7 +11,7 @@ with open('hlap/HLAPepBinder_model.pkl', 'rb') as f:
     clf = pickle.load(f)
 
 def predict(hla_input):
-    return clf.predict(inp_list)
+    return clf.predict([hla_input])
 
 #output list
 # print(y_pred1)
