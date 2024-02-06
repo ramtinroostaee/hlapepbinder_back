@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   hlapep:
-    container_name: hla
+    container_name: hlap
     build: .
     ports:
       - 4856:8000
