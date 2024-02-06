@@ -5,5 +5,5 @@ services:
     container_name: hla
     build: .
     ports:
-      - 4856:3000
+      - 4856:8000
     restart: always
